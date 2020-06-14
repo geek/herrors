@@ -6,8 +6,20 @@ import (
 )
 
 var (
-	ErrBadRequest     = New(http.StatusBadRequest)
-	ErrUnauthorized   = New(http.StatusUnauthorized)
+	ErrBadRequest         = New(http.StatusBadRequest)
+	ErrUnauthorized       = New(http.StatusUnauthorized)
+	ErrPaymentRequired    = New(http.StatusPaymentRequired)
+	ErrForbidden          = New(http.StatusForbidden)
+	ErrNotFound           = New(http.StatusNotFound)
+	ErrMethodNotAllowed   = New(http.StatusMethodNotAllowed)
+	ErrNotAcceptable      = New(http.StatusNotAcceptable)
+	ErrProxyAuthRequired  = New(http.StatusProxyAuthRequired)
+	ErrRequestTimeout     = New(http.StatusRequestTimeout)
+	ErrConflict           = New(http.StatusConflict)
+	ErrResourceGone       = New(http.StatusGone)
+	ErrLengthRequired     = New(http.StatusLengthRequired)
+	ErrPreconditionFailed = New(http.StatusPreconditionFailed)
+
 	ErrInternalServer = New(http.StatusInternalServerError)
 )
 

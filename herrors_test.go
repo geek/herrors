@@ -75,6 +75,23 @@ func TestErrorWrapUnwrap(t *testing.T) {
 	}
 }
 
+func TestfmtErrorfWrap(t *testing.T) {
+	w := fmt.Errorf("foo %w", ErrBadRequest)
+
+	type hasCode interface {
+		Code() uint
+	}
+
+	var ce hasCode
+	if !errors.As(w, &ce) || ce.Code() != http.StatusBadRequest {
+		t.Errorf("Wrap: got code: %d, want code %d", ce.Code(), http.StatusBadRequest)
+	}
+
+	if !errors.Is(w, ErrBadRequest) {
+		t.Errorf("Unwrap: got: %v, want %v", w, ErrBadRequest)
+	}
+}
+
 func TestWrite(t *testing.T) {
 	tests := []struct {
 		err  error
