@@ -1,7 +1,7 @@
-# herrors
---
-    import "github.com/geek/herrors"
-
+# herrors [![Build Status](https://travis-ci.org/geek/herrors.svg?branch=main)](https://travis-ci.org/geek/herrors)
+```go
+import "github.com/geek/herrors"
+```
 ## Examples
 
 ### Basic Bad Request
