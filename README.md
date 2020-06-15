@@ -34,12 +34,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 ## Usage
 
-The following errors are available
-
-```go
-
-```
-
 #### func  New
 
 ```go

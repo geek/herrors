@@ -75,7 +75,7 @@ func TestErrorWrapUnwrap(t *testing.T) {
 	}
 }
 
-func TestfmtErrorfWrap(t *testing.T) {
+func TestFmtErrorfWrap(t *testing.T) {
 	w := fmt.Errorf("foo %w", ErrBadRequest)
 
 	type hasCode interface {
