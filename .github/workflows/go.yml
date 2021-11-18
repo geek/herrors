@@ -26,7 +26,7 @@ jobs:
     - name: Test
       run: go test -v ./...
 
-  tests:
+  sectest:
     runs-on: ubuntu-latest
     env:
       GO111MODULE: on
